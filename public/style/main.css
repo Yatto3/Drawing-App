@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    overflow: hidden;
+    background-color: snow;
+    /* background: linear-gradient(to right, rgb(13, 224, 122) , rgb(62, 183, 231)); */
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+
+}
+
+.container .buttons-container{
+    margin-top: 2vw;
+    width: 20vw;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1vw;
+    gap: 1vw;
+}
+.container .buttons-container .colors{
+    display: flex;
+    flex-direction: row;
+    gap: 0.2vw;
+    transition: 0.2s ease-in;
+}
+
+.buttons-container .btn{
+    cursor: pointer;
+    width: 2vw;
+    height: 2vw;
+    border: 2px solid rgba(240, 248, 255, 0.735);
+    border-radius: 50%;
+}
+
+.buttons-container .colors .btn:active{
+    margin-top: 10px;
+}
+
+.buttons-container > .colors div:nth-child(1){
+    background-color: black;
+}
+.buttons-container > .colors div:nth-child(2){
+    background-color: red;
+}
+.buttons-container > .colors div:nth-child(3){
+    background-color: rgb(255, 234, 0);
+}
+.buttons-container > .colors div:nth-child(4){
+    background-color: green;
+}
+
+.buttons-container .buttons {
+    button{
+        outline: none;
+        border: none;
+        padding: 0.5vw;
+        font-size: 1.5vw;
+        color: white;
+        cursor: pointer;
+        border-radius: 4px
+        
+    };
+    display: flex;
+    gap: 1vw;
+}
+
+.buttons-container 
+.buttons button:nth-child(1){
+    background-color: rgb(4, 216, 0);
+}
+.buttons-container 
+.buttons button:nth-child(2){
+    background-color: rgb(0, 170, 255);
+}
+
+.buttons-container 
+.buttons button:nth-child(3){
+    background-color: rgb(246, 255, 0);
+    color: black;
+}
+
+.buttons-container 
+.buttons button:active{
+    padding-top: 2px;
+}
+
+.selected{
+    border:2px solid rgb(105, 102, 102) !important;
+}
+
+.container canvas{
+    width: 100%;
+    min-height: 100vh;
+    /* border: 2px solid red; */
+    cursor: url('/public/img/icons8-pen-50.png'), auto;
+
+}
